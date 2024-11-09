@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <h1>Shareable Resume Builder</h1>
+    <form action="" id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="position">Position</label>
+            <input type="text" id="position" placeholder="Enter your position" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="address">Address</label>
+            <textarea id="address" placeholder="Enter your address" rows="2"></textarea>
+
+            <label for="languages">Languages</label>
+            <textarea id="languages" placeholder="Enter your languages (comma separated)" rows="2"></textarea>
+
+            <label for="image">Upload Image</label>
+            <input type="file" id="image" accept="image/*">
+
+            <label for="portfolio">Portfolio Link</label>
+            <input type="url" id="portfolio" placeholder="Enter your portfolio link">
+
+            <label for="linkedin">LinkedIn ID</label>
+            <input type="url" id="linkedin" placeholder="Enter your LinkedIn profile link">
+        </fieldset>
+
+        <fieldset>
+            <legend>About Me</legend>
+            <textarea id="about-me" placeholder="Tell us about yourself" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Qualifications</label>
+            <textarea id="education" placeholder="Enter your qualifications" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills</label>
+            <textarea id="skills" placeholder="Enter your skills (comma separated)" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience</label>
+            <textarea id="experience" placeholder="What's your experience?" rows="5" required></textarea>
+        </fieldset>
+
+        <button type="submit"><b>GENERATE</b></button>
+    </form>
+
+    <br>
+
+    <div id="resume-display"></div>
+
+    <a id="share-link" style="display: none; font-size: 0.9em; color: #2980b9; cursor: pointer;">Share Resume Link</a>
+    <button id="download-btn" style="display: none;" onclick="downloadPDF()">Download as PDF</button>
+
+
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

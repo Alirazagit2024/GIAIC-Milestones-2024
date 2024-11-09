@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0 20px 0;
+}
+
+.resume {
+    background-color: #fff;
+    width: 90%; /* Changed to 90% for responsiveness */
+    max-width: 800px; /* Set a max width */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #1E3A8A;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Changed to column for smaller screens */
+    align-items: center; /* Center alignment */
+}
+
+.profile-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: black;
+}
+
+.header-text {
+    text-align: center; /* Center text for smaller screens */
+}
+
+.header-text h1 {
+    font-size: 34px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: left;
+}
+
+.job-title {
+    font-size: 17px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap */
+}
+
+.left-column {
+    background-color: #333;
+    color: #fff;
+    width: 100%; /* Full width on small screens */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.right-column {
+    width: 100%; /* Full width on small screens */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Gap between sections */
+.section {
+    margin-bottom: 20px; /* Adjust this value to increase or decrease gap */
+}
+
+.section h2 {
+    font-size: 14px;
+    color: #00AEEF;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.about-me,
+.contact,
+.language,
+.expertise {
+    border-left: 3px solid #00AEEF;
+    padding-left: 10px;
+}
+
+p,
+ul {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a{
+    color: #00AEEF;
+}
+
+.links a:hover{
+    color: white;
+}
+
+
+.skills ul li,
+.experience ul li,
+.language ul li,
+.expertise ul li,
+.education ul li {
+    margin-bottom: 8px;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+    .left-column {
+        width: 35%; /* Set width for larger screens */
+    }
+
+    .right-column {
+        width: 65%; /* Set width for larger screens */
+    }
+
+    .header {
+        flex-direction: row; /* Change back to row on larger screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .header-text .firstname,
+    .header-text .lastname {
+        font-size: 28px; /* Slightly smaller font size on small screens */
+    }
+
+    .job-title {
+        font-size: 10px; /* Adjust job title size for smaller screens */
+        text-align: left;
+    }
+    .profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+    .header {
+       text-align: center;
+    }
+    .header-text h1 {
+        font-size: 20px;
+    }
+}
